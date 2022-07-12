@@ -2,7 +2,7 @@
 require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cors = require('cors')
 
 
@@ -12,8 +12,10 @@ const app = express();
 const PORT = process.env.PORT || 8080
 
 // Middleware
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+// app.use(bodyParser.json({ limit: "30mb", extended: true }));
+// app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors());
 
 
