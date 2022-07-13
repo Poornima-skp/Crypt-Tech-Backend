@@ -21,6 +21,7 @@ app.use(cors());
 
 // ROUTES
 app.use('/posts', require('./routes/Posts'));
+app.use('/user', require('./routes/users') )
 
 
 // Mongoose Connection
